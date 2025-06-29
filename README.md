@@ -34,7 +34,7 @@ Follow these steps to set up the project locally:
 
 Clone the repository:
 
-git clone https://github.com/MohakGangwani/Movie-Recommender-System.git
+git clone https://github.com/HimaniLohia/movie-recommender-system
 Navigate to the project directory:
 
 cd movie-recommendation-system

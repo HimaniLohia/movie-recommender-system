@@ -41,7 +41,7 @@ Follow these steps to set up the project locally:
 
 1. Clone the repository:
    ```bash
-   git clone 
+   git clone https://github.com/HimaniLohia/movie-recommender-system 
    ```
 
 2. Navigate to the project directory:

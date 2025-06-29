@@ -1,55 +1,56 @@
 # Movie Recommendation System
 
-This repository contains a **Movie Recommendation System** project developed using Python and Flask. It leverages machine learning techniques to recommend movies based on user preferences and historical data.
+This repository contains a **Movie Recommendation System** project developed using Python and Flask. It leverages machine learning techniques to recommend movies based on user preferences and metadata similarity.
 
 ## Features
 
-- **Content-Based Filtering**: Recommends movies based on their metadata, such as genres, cast, crew, and descriptions.
-- **Interactive Web Interface**: Built using Flask, allowing users to search for movies and view personalized recommendations.
+- **Content-Based Filtering**: Suggests similar movies based on textual metadata such as genres, cast, crew, and overview.
+- **Interactive Web Interface**: Users can input a movie name and receive personalized recommendations via a simple Flask-based UI.
 
 ## Machine Learning Workflow
 
-1. **Data Preprocessing**:
-   - Utilized the TMDB dataset from Kaggle, which includes rich metadata on movies.
-   - Cleaned and preprocessed data to handle missing values, duplicates, and inconsistencies.
-   - Parallelized preprocessing tasks using Pandarallel for improved efficiency.
+1. **Data Preprocessing**  
+   - Used the TMDB 5000 Movies and Credits datasets from Kaggle.  
+   - Merged and cleaned datasets, removed null values, and handled inconsistencies.  
+   - Applied parallel processing with Pandarallel to speed up preprocessing.
 
-2. **Feature Engineering**:
-   - Extracted relevant features such as genres, keywords, and cast information.
-   - Employed natural language processing (NLP) techniques to process textual data.
-   - Employed SpaCy for advanced text cleaning.
+2. **Feature Engineering**  
+   - Extracted and combined fields like genres, keywords, overview, cast, and crew into a single metadata field.  
+   - Performed text normalization and vectorization using NLP techniques.  
+   - Used SpaCy for advanced tokenization and lemmatization.
 
-3. **Similarity Calculation**:
-   - Implemented K-Nearest Neighbors (KNN) and TF-IDF vectorization to measure the closeness of movie features.
-   - Created a similarity matrix to efficiently retrieve recommendations.
+3. **Similarity Calculation**  
+   - Converted processed text into vectors using TF-IDF vectorizer.  
+   - Applied K-Nearest Neighbors (KNN) to identify top similar movies.  
+   - Created a similarity matrix to efficiently retrieve movie recommendations.
 
-4. **Model Deployment**:
-   - Integrated the recommendation logic into a Flask web application.
-   - Ensured scalable and efficient query handling for real-time recommendations.
+4. **Model Deployment**  
+   - Deployed the logic in a Flask web application.  
+   - Designed a minimal front-end UI to take user input and show recommendations in real-time.
 
 ## Tools and Libraries Used
 
-- **Programming Language**: Python
-- **Web Framework**: Flask
-- **Data Analysis**: Pandas, Pandarallel, NumPy
-- **Machine Learning**: Scikit-learn (KNN, TF-IDF Vectorizer)
-- **Natural Language Processing**: SpaCy, Scikit-learn (TF-IDF Vectorizer)
+- **Programming Language**: Python  
+- **Web Framework**: Flask  
+- **Data Analysis**: Pandas, Pandarallel, NumPy  
+- **Machine Learning**: Scikit-learn (KNN, TF-IDF Vectorizer)  
+- **Natural Language Processing**: SpaCy, Scikit-learn  
 
 ## Installation
 
-Follow these steps to set up the project locally:
+To set up the project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/HimaniLohia/movie-recommender-system 
+   git clone https://github.com/HimaniLohia/movie-recommender-system
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd movie-recommendation-system
+   cd movie-recommender-system
    ```
 
-3. Install the required dependencies:
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
@@ -59,48 +60,46 @@ Follow these steps to set up the project locally:
    python app.py
    ```
 
-5. Open your browser and go to `http://127.0.0.1:5000/` to use the application.
+5. Open your browser and go to:
+   ```
+   http://127.0.0.1:5000/
+   ```
 
 ## Dataset
 
-The project uses the **TMDB dataset**, which can be downloaded from [Kaggle](https://www.kaggle.com/).
+This project uses the **TMDB 5000 Movie Dataset**, which can be downloaded from [Kaggle](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata).
 
-Ensure the dataset is placed in the appropriate directory (`/data/`) before running the application.
+Make sure to place the CSV files in the appropriate `/data/` directory before running the app.
 
 ## Future Enhancements
 
-- Integrate a **hybrid recommendation system** combining content-based and collaborative filtering.
-- Implement advanced techniques like **Matrix Factorization** or **Deep Learning** for improved recommendations.
-- Deploy the application on cloud platforms like AWS or Heroku for wider accessibility.
+- Combine content-based and collaborative filtering to form a hybrid recommender.
+- Use matrix factorization or deep learning (e.g., autoencoders) for better prediction accuracy.
+- Deploy on Heroku, Render, or AWS for cloud access.
 
 ## Contribution
 
-Contributions are welcome! If you have ideas to improve the project or want to fix any issues, follow these steps:
+Contributions are welcome. To contribute:
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix:
+1. Fork the repository.  
+2. Create a new feature branch:
    ```bash
-   git checkout -b feature-name
+   git checkout -b feature-branch
    ```
 3. Commit your changes:
    ```bash
-   git commit -m "Description of changes"
+   git commit -m "Added feature or fixed issue"
    ```
-4. Push to the branch:
+4. Push to your fork:
    ```bash
-   git push origin feature-name
+   git push origin feature-branch
    ```
-5. Submit a pull request detailing your changes.
+5. Open a pull request explaining your changes.
 
----
+## Contact
 
-### Contact
-
-If you have any questions or feedback, feel free to reach out:
-
-- **Name**: Himani lohia
-- **Email**: himani99lohia@gmail.com
+- **Name**: Himani Lohia  
+- **Email**: himani99lohia@gmail.com  
 - **LinkedIn**: https://www.linkedin.com/in/himanilohia/
 
 ---
-Thank you for checking out the Movie Recommendation System project!

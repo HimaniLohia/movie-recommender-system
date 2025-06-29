@@ -1,7 +1,7 @@
 # movie-recommender-system
 This repository contains a Movie Recommendation System project developed using Python and Flask. It leverages machine learning techniques to recommend movies based on user preferences and historical data.
 
-Features
+# features
 Content-Based Filtering: Recommends movies based on their metadata, such as genres, cast, crew, and descriptions.
 Interactive Web Interface: Built using Flask, allowing users to search for movies and view personalized recommendations.
 Machine Learning Workflow
